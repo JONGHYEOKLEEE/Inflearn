@@ -1,7 +1,10 @@
 n = int(input())
 student = list(map(int, input().split()))
 
-scoreAvg = round(sum(student) / n)
+# scoreAvg = round(sum(student) / n)
+# python 에서 round 함수는 round_half_even 방식임.
+# 따라서 round_half_up을 하려면 아래와 같이해야함.
+scoreAvg = int((sum(student) / n) + 0.5)
 diff = abs(scoreAvg-student[0])
 idx = 0
 
